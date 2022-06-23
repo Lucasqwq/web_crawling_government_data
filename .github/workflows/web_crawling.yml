@@ -17,6 +17,7 @@ jobs:
     - name: generate keys
       run: |
         echo -n '${{ secrets.FIREBASE_KEY }}' > private_key.json
+        echo -n '${{ secrets.GOVERNMENT_KEY }}' > GOVERNMENT_KEY.txt
     - name: upgrade pip
       run: |
         python -m pip install --upgrade pip
