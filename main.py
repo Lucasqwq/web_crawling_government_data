@@ -1,5 +1,5 @@
 #引用必要套件
-import requests , json
+import requests , json , time
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
