@@ -1,5 +1,8 @@
 name: web_crawling_data_into_firebase
-on: push
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   my-first-job:
