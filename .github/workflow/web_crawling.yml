@@ -1,0 +1,19 @@
+name: web_crawling_data_into_firebase
+on: push
+
+jobs:
+  my-first-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v3 
+    - name: upgrade pip
+      run: |
+        python -m pip install --upgrade pip
+    - name: installing requirements
+      run: |
+        pip install -r requirements.txt
+    - name: running main file
+      run: |
+        python3 main.py
