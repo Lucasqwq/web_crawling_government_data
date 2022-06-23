@@ -1,6 +1,11 @@
 name: web_crawling_data_into_firebase
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   my-first-job:
