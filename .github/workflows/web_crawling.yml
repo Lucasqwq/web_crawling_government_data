@@ -1,4 +1,5 @@
 name: web_crawling_data_into_firebase
+
 on: push
 
 jobs:
