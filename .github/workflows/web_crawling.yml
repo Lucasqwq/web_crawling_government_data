@@ -16,7 +16,7 @@ jobs:
     - uses: actions/setup-python@v3 
     - name: generate keys
       run: |
-        echo -n '${{ secrets.SECRET }}' > private_key.json
+        echo -n '${{ secrets.FIREBASE_KEY }}' > private_key.json
     - name: upgrade pip
       run: |
         python -m pip install --upgrade pip
