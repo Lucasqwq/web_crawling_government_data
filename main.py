@@ -10,6 +10,10 @@ with open('GOVERNMENT_KEY.txt','r') as f:
 cred = credentials.Certificate("private_key.json") # 引用私密金鑰
 firebase_admin.initialize_app(cred)                                     # 初始化firebase，注意不能重複初始化
 db = firestore.client()                                                 # 初始化firestore
+
+nowTime = int(time.time())                                              #初始unix系統時間到現在時間的秒數
+struct_time = time.localtime(nowTime)                                   #以tuple方式轉換秒數至現今時間
+timeString = time.strftime("%Y-%m-%d-%I:%M:%S-%P", struct_time)         #把現今時間轉換至特定格式
  
 def get_weather_into_firebase():                                        #從url中拿取資料，並寫入到資料庫
     url = "https://opendata.cwb.gov.tw/api/v1/rest/datastore/{}?Authorization="+urlapi+"&format=JSON"  #擷取資料的url
